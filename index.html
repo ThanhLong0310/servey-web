@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo sát ý kiến nhân dân - Xã Phượng Dực</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f4f8;
+            padding: 16px;
+        }
+
+        /* KHUNG CHỨA DÙNG BACKGROUND IMAGE */
+        .banner-background {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            
+            /* Tỉ lệ ảnh 1536x1024 giúp background giữ nguyên tỉ lệ chuẩn */
+            aspect-ratio: 1536 / 1024; 
+            
+            /* ĐÃ SỬA: Đã đổi tên file khớp với ảnh servey.png trong thư mục của bạn */
+            background-image: url('servey.png'); 
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* NÚT TÀNG HÌNH ĐÈ ĐÚNG LÊN VÙNG NÚT MÀU ĐỎ "NHẤN VÀO ĐÂY..." */
+        .survey-btn {
+            position: absolute;
+            top: 78.7%;
+            left: 31.7%;
+            width: 49.5%;
+            height: 14.4%;
+            
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        /* Hiệu ứng nổi bật khi rê chuột vào nút đỏ */
+        .survey-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+        }
+
+        .survey-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner-background">
+        <!-- Khi click vào vị trí nút đỏ sẽ mở trang Google Forms -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVXzn061uOmuvf2_5qDmU8tcs3IEzk-Qo6Oq2lC1HMxL20kA/viewform" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="survey-btn"
+           title="Nhấn vào đây để tham gia khảo sát ngay!">
+        </a>
+    </div>
+
+</body>
+</html>
